@@ -1,5 +1,14 @@
 def leapyear(val):
-    pass
+    if (val % 4) == 0:
+        if (val % 100) == 0:
+            if (val % 400) == 0:
+                return "{0} is a leap year".format(val)
+            else:
+                return "{0} is not a leap year".format(val)
+        else:
+            return "{0} is a leap year".format(val)
+    else:
+        return "{0} is not a leap year".format(val)
 
 def getInput():
     while True:
@@ -11,4 +20,4 @@ def getInput():
             print("Please enter an integer.")
 
 val = getInput()
-leapyear(val)
+print(leapyear(val))
